@@ -216,9 +216,9 @@ export default function InvestigatePage() {
       {/* Content Tabs */}
       <div className="flex items-center gap-1 bg-[#080b12] p-1 rounded-xl border border-white/[0.04] w-fit">
         {([
-          { key: 'GRAPH', label: 'Threat Graph', icon: Activity },
+          { key: 'GRAPH', label: 'Threat Graph', icon: Activity, badge: undefined },
           { key: 'LIVE_OSINT', label: 'Live OSINT Data', icon: Globe, badge: liveResult ? `${liveResult.sources.length}` : undefined },
-          { key: 'SCORING', label: 'Risk Analysis', icon: ShieldAlert },
+          { key: 'SCORING', label: 'Risk Analysis', icon: ShieldAlert, badge: undefined },
         ] as const).map(tab => (
           <button
             key={tab.key}
